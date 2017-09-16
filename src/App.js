@@ -63,13 +63,22 @@ class App extends Component {
   }
 
   handleAddTransaction = (transaction) => {
-    const { transactions } = this.state;
+    const { transactions, categories } = this.state;
+    const categoryIndex = categories.findIndex(category => category.name === transaction.category);
+
+    if (categoryIndex === -1) {
+      console.error(`Category with index ${transaction.category} not found`)
+      return;
+    }
+
+    categories[categoryIndex].activity += transaction.value;
 
     this.setState({
       transactions: [
         ...transactions,
         { id: Math.random().toString(36).substring(7), ...transaction }
-      ]
+      ],
+      categories
     });
   }
 

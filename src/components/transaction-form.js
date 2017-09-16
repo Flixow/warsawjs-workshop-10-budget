@@ -16,7 +16,7 @@ class TransactionForm extends Component {
 
     this.props.onSubmit({
       description,
-      value,
+      value: Number(value),
       date,
       category
     })
