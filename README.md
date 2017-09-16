@@ -8,6 +8,7 @@
 ## Kroki:
 - [ ] Zainstalować globalnie `create-react-app` z npm'a
 - [ ] Uruchomić komendę `create-react-app warsawjs-workshop-10-budget`
+- [ ] Omówić `react-scripts` dołączone z nowo utworzonym projektem. [Source](https://github.com/facebookincubator/create-react-app/tree/master/packages/react-scripts/scripts)
 - [ ] Zainstalować wtyczkę [react-devtools](https://github.com/facebook/react-devtools)
 - [ ] Stworzyć komponenty `HelloStateless` oraz `HelloStateful` w `App.js`
 - [ ] Utworzyć folder `components` w katalogu `src`
