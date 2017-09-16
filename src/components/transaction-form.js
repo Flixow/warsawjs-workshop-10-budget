@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Input from './input';
 
 class TransactionForm extends Component {
@@ -67,8 +67,8 @@ class TransactionForm extends Component {
   }
 };
 
-// TransactionForm.propTypes = {
-//   : PropTypes.
-// };
+TransactionForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired
+};
 
 export default TransactionForm;
