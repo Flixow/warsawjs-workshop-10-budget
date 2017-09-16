@@ -31,12 +31,19 @@ class CategoryCard extends Component {
 
   render() {
     const {
-      item: { budgeted, name, activity }
+      item: { id, budgeted, name, activity },
+      onRemoveCategory
     } = this.props;
     const { editMode } = this.state;
 
     return (
       <div className="Category-card">
+        <div
+          className="Category-card__Remove"
+          onClick={() => onRemoveCategory({ id })}
+        >
+          &times;
+        </div>
         <h1>{name}</h1>
         <h2>Budgeted:
         {editMode ? (

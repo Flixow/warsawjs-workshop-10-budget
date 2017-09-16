@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {
-  TransactionList, CategoryCard
+  TransactionList, CategoryList
 } from './components';
 
 import logo from './logo.svg';
@@ -83,6 +83,12 @@ class App extends Component {
     this.setState({ categories });
   }
 
+  handleRemoveCategory = ({ id }) => {
+    const { categories } = this.state;
+
+    this.setState({ categories: categories.filter(category => category.id !== id) });
+  }
+
   render() {
     const { transactions, categories } = this.state;
 
@@ -97,9 +103,10 @@ class App extends Component {
           onRemoveTransaction={this.handleRemoveTransaction}
           onAddTransaction={this.handleAddTransaction}
         />
-        <CategoryCard
-          item={categories[0]}
+        <CategoryList
+          items={categories}
           handleChangeCategoryBudget={this.handleChangeCategoryBudget}
+          onRemoveCategory={this.handleRemoveCategory}
         />
       </div>
     );

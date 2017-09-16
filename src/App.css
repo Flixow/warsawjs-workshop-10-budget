@@ -42,7 +42,8 @@
   justify-content: space-between;
 }
 
-.Transaction-card__Remove {
+.Transaction-card__Remove,
+.Category-card__Remove {
   position: absolute;
   top: 5px;
   right: 15px;

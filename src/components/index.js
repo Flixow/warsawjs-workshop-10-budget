@@ -7,6 +7,7 @@ import TransactionList from './transaction-list';
 import TransactionForm from './transaction-form';
 
 import CategoryCard from './category-card';
+import CategoryList from './category-list';
 
 export {
   HelloStateless,
@@ -17,5 +18,6 @@ export {
   TransactionList,
   TransactionForm,
 
-  CategoryCard
+  CategoryCard,
+  CategoryList
 }
