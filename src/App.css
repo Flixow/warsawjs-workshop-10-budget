@@ -22,3 +22,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.Transaction-card {
+  width: 600px;
+  border: 2px solid #000;
+  padding: 10px;
+}
+
+.Transaction-card h1 {
+  margin-top: 0;
+}
+
+.Transaction-card__metadata{
+  display: flex;
+  justify-content: space-between;
+}
