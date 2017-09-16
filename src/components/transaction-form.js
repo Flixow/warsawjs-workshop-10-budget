@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
+import Input from './input';
 
 class TransactionForm extends Component {
   state = {
@@ -33,29 +34,32 @@ class TransactionForm extends Component {
         className='Transaction-form'
         onSubmit={this.onSubmit}
       >
-        <input
-          type='text'
+        <Input
+          name='description'
           placeholder='Description'
           value={description}
-          onChange={(e) => this.handleInputChange('description', e.target.value)}
+          onChange={this.handleInputChange}
         />
-        <input
+        <Input
+          name='value'
           type='number'
           placeholder='value'
           value={value}
-          onChange={(e) => this.handleInputChange('value', e.target.value)}
+          onChange={this.handleInputChange}
         />
-        <input
+        <Input
+          name='date'
           type='text'
           placeholder='Date'
           value={date}
-          onChange={(e) => this.handleInputChange('date', e.target.value)}
+          onChange={this.handleInputChange}
         />
-        <input
+        <Input
+          name='category'
           type='text'
           placeholder='Category'
           value={category}
-          onChange={(e) => this.handleInputChange('category', e.target.value)}
+          onChange={this.handleInputChange}
         />
         <button>New transaction</button>
       </form>
