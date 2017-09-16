@@ -1,14 +1,10 @@
-# #0 Init application
+# #1 Counter component
 
 ## Cele:
-- Wykorzystanie biblioteki `create-react-app` ktora pozwala na szybkie rozpoczęcie projektu
-- Napisanie pierwszego komponentu w celu zrozumienia komponentowości reacta (stateless and stateful components)
-- Poznanie oficjalnej wtyczki do chrome `react-devtools`
+- Napisanie pierwszego dynamicznego komponentu
+- Zrozumienie operacji na state oraz event handlerow
 
 ## Kroki:
-1. Zainstalować globalnie `create-react-app` z npm'a
-2. Uruchomić komendę `create-react-app warsawjs-workshop-10-budget`
-3. Zainstalować wtyczkę [react-devtools](https://github.com/facebook/react-devtools)
-4. Stworzyć komponenty `HelloStateless` oraz `HelloStateful` w `App.js`
-5. Utworzyć folder `components` w katalogu `src`
-6. Przenieść komponenty `HelloStateless` oraz `HelloStateful` do osobnych plikow w katalogu `components`
+1. Wyświetlić stateful komponent `Counter` wyświetlajcy initial state oraz buttony
+2. Pokazać 2 sposoby na zdefiniowanie inistal state (constructor, class object) oraz destructing state w metodzie `render`
+3. Stworzyć metody `incrementCount` oraz `decrementCount` oraz podpiać je pod buttony

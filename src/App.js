@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import HelloStateless from './components/hello-stateless'
-import HelloStateful from './components/hello-stateful'
+import HelloStateless from './components/hello-stateless';
+import HelloStateful from './components/hello-stateful';
+import Counter from './components/counter';
 
 import logo from './logo.svg';
 import './App.css';
@@ -16,6 +17,7 @@ class App extends Component {
         </div>
         <HelloStateless name="Daniel" />
         <HelloStateful name="Daniel" />
+        <Counter />
       </div>
     );
   }
