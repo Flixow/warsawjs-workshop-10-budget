@@ -11,3 +11,7 @@
 - [ ] Dodanie propsa `readOnly` i w zależności od niego zablokować możliwość modyfikacji kategorii z widoku `TransactionList`
 - [ ] Dodanie klasy css do elementu `span` wyświetlającego wartość `budgeted` w zależności od propsa `readOnly`
 - [ ] Dodać klasę css `link`
+- [ ] W komponencie `TransactionForm` dodać możliwość wybrania kategorii dla nowej transkacji z selecta
+- [ ] Przy dodawaniu nowej transakcji aktualizować wartość `budgeted` dla wybranej kategorii
+
+Tip: w parametrach funkcji `onSubmit` w komponencie `TransactionForm` zamienić wartość `value` na typ `Number` dla poprawnego dodawania wartości.
