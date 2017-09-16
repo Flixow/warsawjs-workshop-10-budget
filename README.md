@@ -1,10 +1,9 @@
-# #8 Views logic
+# #8 Category form
 
 ## Cele:
-- Utrwalenie sterowania renderowanymi elementami widoku na podstawie wartości ze state
+- Utrwalenie dodawania elementów do tablicy w state za pomocą formularza
 
 ## Kroki:
-- [ ] Utworzyć w state wartość `currentView` na `transactions`
-- [ ] Utworzyć buttony `Transactions` oraz `Categories` do sterowania który widok ma być widoczny
-- [ ] Utworzyć metodę zmieniającą wartość `currentView`
-- [ ] Uzależnić renderowanie komponentów od wartości `currentView`
+- [ ] Utworzyć i wyświetlić komponent `CategoryForm` z kontrolowanymi inputami
+- [ ] Utworzyć w najwyższym komponencie metodę `handleAddCategory` do dodawania kolejnego obiektu kategorii do tablicy i zapisywanie jej do state
+- [ ] Połączyć formularz z metodą `handleAddCategory`
