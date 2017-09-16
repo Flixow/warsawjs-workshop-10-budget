@@ -57,7 +57,13 @@ class App extends Component {
   }
 
   handleRemoveTransaction = ({ id }) => {
-    const { transactions } = this.state;
+    const { transactions, categories } = this.state;
+    const transactionCategory = transactions.find(transaction => transaction.id === id).category
+    const transactionsWithSameCategory = transactions.filter(transaction => transaction.category === transactionCategory)
+
+    if (transactionsWithSameCategory.length <= 1) { // W tym momencie w transactions mamy jeszcze transakcję którą usuwamy
+      this.setState({ categories: categories.filter(category => category.name !== transactionCategory) });
+    }
 
     this.setState({ transactions: transactions.filter(transaction => transaction.id !== id) });
   }
