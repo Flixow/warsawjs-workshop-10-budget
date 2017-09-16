@@ -32,19 +32,28 @@ class CategoryCard extends Component {
   render() {
     const {
       item: { id, budgeted, name, activity },
-      onRemoveCategory
+      onRemoveCategory,
+      setCategory,
+      readOnly
     } = this.props;
     const { editMode } = this.state;
 
     return (
       <div className="Category-card">
-        <div
-          className="Category-card__Remove"
-          onClick={() => onRemoveCategory({ id })}
+        {!readOnly && (
+          <div
+            className="Category-card__Remove"
+            onClick={() => onRemoveCategory({ id })}
+          >
+            &times;
+          </div>
+        )}
+        <h1
+          className='link'
+          onClick={() => setCategory(name)}
         >
-          &times;
-        </div>
-        <h1>{name}</h1>
+          {name}
+        </h1>
         <h2>Budgeted:
         {editMode ? (
           <input
@@ -56,7 +65,15 @@ class CategoryCard extends Component {
             onKeyPress={this.handleKeyPress}
           />
         ) : (
-          <span onClick={this.handleChangeEditMode}>{budgeted}</span>
+          <span
+            onClick={!readOnly && this.handleChangeEditMode}
+            className={`
+              Category-card__value
+              ${!readOnly ? 'Category-card__value--editable' : ''}
+            `}
+          >
+            {budgeted}
+          </span>
         )}
          zł
         </h2>

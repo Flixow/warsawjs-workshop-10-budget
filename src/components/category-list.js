@@ -4,7 +4,8 @@ import CategoryCard from './category-card';
 import CategoryForm from './category-form';
 
 const CategoryList = ({
-  items, onRemoveCategory, onAddCategory, handleChangeCategoryBudget
+  items, onRemoveCategory, onAddCategory, handleChangeCategoryBudget,
+  setCategory
 }) => (
   <div>
     <CategoryForm onSubmit={onAddCategory} />
@@ -14,6 +15,7 @@ const CategoryList = ({
         item={item}
         onRemoveCategory={onRemoveCategory}
         handleChangeCategoryBudget={handleChangeCategoryBudget}
+        setCategory={setCategory}
       />
     ))}
   </div>

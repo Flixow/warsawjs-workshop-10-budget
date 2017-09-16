@@ -24,6 +24,12 @@
   to { transform: rotate(360deg); }
 }
 
+.link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .Transaction-card,
 .Category-card {
   width: 600px;
@@ -66,13 +72,13 @@
   border-color: red;
 }
 
-.Category-card h2 span {
+.Category-card__value {
   border-radius: 3px;
   padding: 3px 5px;
   border: 3px solid transparent;
 }
 
-.Category-card h2 span:hover {
+.Category-card__value--editable:hover {
   border: 3px solid #CEE5FE;
 }
 

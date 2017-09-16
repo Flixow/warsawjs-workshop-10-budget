@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 const TransactionCard = ({
   item: { id, description, value, date, category },
-  onRemoveTransaction
+  onRemoveTransaction,
+  setCategory
 }) => (
   <div className="Transaction-card">
     <div
@@ -16,7 +17,12 @@ const TransactionCard = ({
     <h2>{value} zł</h2>
     <div className='Transaction-card__metadata'>
       <span>{date}</span>
-      <span>{category}</span>
+      <span
+        className='link'
+        onClick={() => setCategory(category)}
+      >
+        {category}
+      </span>
     </div>
   </div>
 );

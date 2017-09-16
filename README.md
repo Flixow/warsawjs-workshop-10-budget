@@ -1,9 +1,13 @@
-# #8 Category form
+# #9 Connect transaction with category
 
 ## Cele:
-- Utrwalenie dodawania elementów do tablicy w state za pomocą formularza
+- Wyświetlanie komponentów na podstawie wyfiltrowanej tablicy
 
 ## Kroki:
-- [ ] Utworzyć i wyświetlić komponent `CategoryForm` z kontrolowanymi inputami
-- [ ] Utworzyć w najwyższym komponencie metodę `handleAddCategory` do dodawania kolejnego obiektu kategorii do tablicy i zapisywanie jej do state
-- [ ] Połączyć formularz z metodą `handleAddCategory`
+- [ ] Dodać wartość `selectedCategory` do initial state
+- [ ] Stworzyć metodę `setCurrentCategory` i użyć ją w komponentach `CategoryCard` i `TransactionCard`
+- [ ] Dodać filtrowanie transakcji na podstawie `selectedCategory` w komponencie `TransactionList`
+- [ ] Wyświetlić komponent `CategoryCard` dla wartości `selectedCategory` jeżeli jest ustawiona
+- [ ] Dodanie propsa `readOnly` i w zależności od niego zablokować możliwość modyfikacji kategorii z widoku `TransactionList`
+- [ ] Dodanie klasy css do elementu `span` wyświetlającego wartość `budgeted` w zależności od propsa `readOnly`
+- [ ] Dodać klasę css `link`

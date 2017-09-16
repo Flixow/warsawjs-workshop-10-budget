@@ -10,6 +10,7 @@ import './App.css';
 class App extends Component {
   state = {
     currentView: 'transactions',
+    selectedCategory: null,
     transactions: [
       {
         id: 1,
@@ -102,11 +103,18 @@ class App extends Component {
   }
 
   handleChangeView = (view) => {
-    this.setState({ currentView: view });
+    this.setState({
+      currentView: view,
+      selectedCategory: null
+    });
+  }
+
+  handleSetCategory = (name) => {
+    this.setState({ selectedCategory: name });
   }
 
   render() {
-    const { transactions, categories, currentView } = this.state;
+    const { transactions, categories, currentView, selectedCategory } = this.state;
 
     return (
       <div className="App">
@@ -118,11 +126,14 @@ class App extends Component {
           <button onClick={() => this.handleChangeView('transactions')}>Transactions</button>
           <button onClick={() => this.handleChangeView('categories')}>Categories</button>
         </div>
-        {currentView === 'transactions' ? (
+        {currentView === 'transactions' || !!selectedCategory ? (
           <TransactionList
             items={transactions}
             onRemoveTransaction={this.handleRemoveTransaction}
             onAddTransaction={this.handleAddTransaction}
+            setCategory={this.handleSetCategory}
+            selectedCategory={selectedCategory}
+            categories={categories}
           />
         ) : (
           <CategoryList
@@ -130,6 +141,8 @@ class App extends Component {
             handleChangeCategoryBudget={this.handleChangeCategoryBudget}
             onRemoveCategory={this.handleRemoveCategory}
             onAddCategory={this.handleAddCategory}
+            setCategory={this.handleSetCategory}
+            selectedCategory={selectedCategory}
           />
         )}
       </div>
