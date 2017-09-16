@@ -1,14 +1,8 @@
-# #2 Transaction card component
+# #3 Transaction list
 
 ## Cele:
-- Napisanie reużywalnego komponentu
-- Wyświetlanie danych z tablicy obiektów przekazanych za pomocą propsów
+- Wyświetlanie listy komponentów na podstawie tablicy przekazanej za pomocą propsów
 
 ## Kroki:
-1. Wyświetlić stateless `TransactionCard` komponent (bez dynamicznych danych)
-2. Dodać `index.js` do katalogu `components`
-3. Zdefiniować listę transakcji jako initial state najwyższego komponentu
-4. Przekazać 0 element tablicy `transactions` do komponentu `TransactionCard`
-5. Użyć PropTypes
-6. Załadować dane z propsów
-7. Użyć destructingu do wyciągnięcia właściwości obiektu item
+1. Utworzyć i wyświetlić komponent `TransactionList`
+2. Utworzyć w najwyższym komponencie metodę do usuwania ze state transkacji o konkretnym id i użyć jej w komponencie `TransactionCard`

@@ -1,8 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TransactionCard = ({ item: { description, value, date, category } }) => (
+const TransactionCard = ({
+  item: { id, description, value, date, category },
+  onRemoveTransaction
+}) => (
   <div className="Transaction-card">
+    <div
+      className="Transaction-card__Remove"
+      onClick={() => onRemoveTransaction({ id })}
+    >
+      &times;
+    </div>
     <h1>{description}</h1>
     <h2>{value} zł</h2>
     <div className='Transaction-card__metadata'>
