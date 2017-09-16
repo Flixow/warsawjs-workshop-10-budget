@@ -1,8 +1,9 @@
-# #3 Transaction list
+# #4 Transaction form
 
 ## Cele:
-- Wyświetlanie listy komponentów na podstawie tablicy przekazanej za pomocą propsów
+- Dodawanie elementów do tablicy w state za pomocą formularza
 
 ## Kroki:
-1. Utworzyć i wyświetlić komponent `TransactionList`
-2. Utworzyć w najwyższym komponencie metodę do usuwania ze state transkacji o konkretnym id i użyć jej w komponencie `TransactionCard`
+- [ ] Utworzyć i wyświetlić komponent `TransactionForm` z kontrolowanymi inputami
+- [ ] Utworzyć w najwyższym komponencie metodę `handleAddTransaction` do dodawania kolejnego obiektu transakcji do tablicy i zapisywanie jej do state
+- [ ] Połączyć formularz z metodą `handleAddTransaction`

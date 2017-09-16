@@ -48,3 +48,11 @@
   color: red;
   cursor: pointer;
 }
+
+.Transaction-form {
+  padding: 10px 0;
+}
+
+.Transaction-form * + * {
+  margin-left: 10px;
+}

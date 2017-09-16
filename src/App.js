@@ -40,6 +40,17 @@ class App extends Component {
     this.setState({ transactions: transactions.filter(transaction => transaction.id !== id) });
   }
 
+  handleAddTransaction = (transaction) => {
+    const { transactions } = this.state;
+
+    this.setState({
+      transactions: [
+        ...transactions,
+        { id: Math.random().toString(36).substring(7), ...transaction }
+      ]
+    });
+  }
+
   render() {
     const { transactions } = this.state;
 
@@ -52,6 +63,7 @@ class App extends Component {
         <TransactionList
           items={transactions}
           onRemoveTransaction={this.handleRemoveTransaction}
+          onAddTransaction={this.handleAddTransaction}
         />
       </div>
     );
