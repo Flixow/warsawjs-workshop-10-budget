@@ -84,6 +84,17 @@ class App extends Component {
     this.setState({ categories });
   }
 
+  handleAddCategory = (category) => {
+    const { categories } = this.state;
+
+    this.setState({
+      categories: [
+        ...categories,
+        { id: Math.random().toString(36).substring(7), ...category }
+      ]
+    });
+  }
+
   handleRemoveCategory = ({ id }) => {
     const { categories } = this.state;
 
@@ -118,6 +129,7 @@ class App extends Component {
             items={categories}
             handleChangeCategoryBudget={this.handleChangeCategoryBudget}
             onRemoveCategory={this.handleRemoveCategory}
+            onAddCategory={this.handleAddCategory}
           />
         )}
       </div>

@@ -52,11 +52,13 @@
   cursor: pointer;
 }
 
-.Transaction-form {
+.Transaction-form,
+.Category-form {
   padding: 10px 0;
 }
 
-.Transaction-form * + * {
+.Transaction-form * + *,
+.Category-form * + * {
   margin-left: 10px;
 }
 
