@@ -6,9 +6,9 @@
 - Poznanie oficjalnej wtyczki do chrome `react-devtools`
 
 ## Kroki:
-1. Zainstalować globalnie `create-react-app` z npm'a
-2. Uruchomić komendę `create-react-app warsawjs-workshop-10-budget`
-3. Zainstalować wtyczkę [react-devtools](https://github.com/facebook/react-devtools)
-4. Stworzyć komponenty `HelloStateless` oraz `HelloStateful` w `App.js`
-5. Utworzyć folder `components` w katalogu `src`
-6. Przenieść komponenty `HelloStateless` oraz `HelloStateful` do osobnych plikow w katalogu `components`
+- [ ] Zainstalować globalnie `create-react-app` z npm'a
+- [ ] Uruchomić komendę `create-react-app warsawjs-workshop-10-budget`
+- [ ] Zainstalować wtyczkę [react-devtools](https://github.com/facebook/react-devtools)
+- [ ] Stworzyć komponenty `HelloStateless` oraz `HelloStateful` w `App.js`
+- [ ] Utworzyć folder `components` w katalogu `src`
+- [ ] Przenieść komponenty `HelloStateless` oraz `HelloStateful` do osobnych plikow w katalogu `components`
