@@ -7,7 +7,7 @@ class TransactionForm extends Component {
     description: '',
     value: '',
     date: '',
-    category: ''
+    category: this.props.categories[0].name
   }
 
   onSubmit = (e) => {
@@ -54,13 +54,16 @@ class TransactionForm extends Component {
           value={date}
           onChange={this.handleInputChange}
         />
-        <Input
-          name='category'
-          type='text'
-          placeholder='Category'
+        <select
           value={category}
-          onChange={this.handleInputChange}
-        />
+          onChange={(e) => this.handleInputChange('category', e.target.value)}
+        >
+          {this.props.categories.map(category => (
+            <option key={category.id} value={category.name}>
+              {category.name}
+            </option>
+          ))}
+        </select>
         <button>New transaction</button>
       </form>
     )
@@ -68,7 +71,8 @@ class TransactionForm extends Component {
 };
 
 TransactionForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired,
+  categories: PropTypes.array.isRequired
 };
 
 export default TransactionForm;
