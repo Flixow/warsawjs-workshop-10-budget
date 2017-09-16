@@ -1,9 +1,25 @@
-# #4 Transaction form
+# #5 Category card component
 
 ## Cele:
-- Dodawanie elementów do tablicy w state za pomocą formularza
+- Utrwalenie komponentowego myślenia w react
 
 ## Kroki:
-- [ ] Utworzyć i wyświetlić komponent `TransactionForm` z kontrolowanymi inputami
-- [ ] Utworzyć w najwyższym komponencie metodę `handleAddTransaction` do dodawania kolejnego obiektu transakcji do tablicy i zapisywanie jej do state
-- [ ] Połączyć formularz z metodą `handleAddTransaction`
+- [ ] Dodać do initial state najwyższego komponentu listę kategorii
+- [ ] Wyświetlić stateless `CategoryCard` komponent dla 0 elementu tablicy `categories`
+- [ ] Dodać metodę `handleChangeCategoryBudget` do najwyższego komponentu oraz przekazać ją do komponentu `CategoryCard`
+- [ ] Wyświetlić input obok wartości `budgeted`
+- [ ] Dodać logikę wyświetlania input/value w zależności od wartości `editMode` w state komponentu `CategoryCard` (zmieniamy stateless na stateful)
+```
+  handleChangeEditMode = () => {
+    this.setState({ editMode: !this.state.editMode});
+  }
+```
+- [ ] Dodać metodę `handleSubmit` która wywoła metodę `handleChangeCategoryBudget`
+- [ ] Dodać handler na klawisz `enter` wywołujący submit forma oraz przekazać go jako `onKeyPress` props do `input`
+```
+  handleKeyPress = e => {
+    if (e.key === 'Enter') {
+      this.handleSubmit()
+    }
+  }
+```

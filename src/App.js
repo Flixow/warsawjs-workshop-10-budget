@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {
-  TransactionList
+  TransactionList, CategoryCard
 } from './components';
 
 import logo from './logo.svg';
@@ -31,6 +31,26 @@ class App extends Component {
         date: '26.08.2017',
         category: 'Samochód'
       }
+    ],
+    categories: [
+      {
+        id: 1,
+        name: 'Edukacja',
+        budgeted: 100,
+        activity: 50
+      },
+      {
+        id: 2,
+        name: 'Transport',
+        budgeted: 200,
+        activity: 123
+      },
+      {
+        id: 3,
+        name: 'Samochód',
+        budgeted: 300,
+        activity: 170
+      }
     ]
   }
 
@@ -51,8 +71,20 @@ class App extends Component {
     });
   }
 
+  handleChangeCategoryBudget = ({ id, budgeted }) => {
+    const { categories } = this.state;
+    const categoryIndex = categories.findIndex(category => category.id === id);
+    if (categoryIndex === -1) {
+      console.error(`Category with index ${id} not found`)
+      return;
+    }
+
+    categories[categoryIndex].budgeted = budgeted;
+    this.setState({ categories });
+  }
+
   render() {
-    const { transactions } = this.state;
+    const { transactions, categories } = this.state;
 
     return (
       <div className="App">
@@ -64,6 +96,10 @@ class App extends Component {
           items={transactions}
           onRemoveTransaction={this.handleRemoveTransaction}
           onAddTransaction={this.handleAddTransaction}
+        />
+        <CategoryCard
+          item={categories[0]}
+          handleChangeCategoryBudget={this.handleChangeCategoryBudget}
         />
       </div>
     );

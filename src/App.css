@@ -24,7 +24,8 @@
   to { transform: rotate(360deg); }
 }
 
-.Transaction-card {
+.Transaction-card,
+.Category-card {
   width: 600px;
   border: 2px solid #000;
   padding: 10px;
@@ -35,7 +36,8 @@
   margin-top: 0;
 }
 
-.Transaction-card__metadata{
+.Transaction-card__metadata,
+.Category-card__metadata {
   display: flex;
   justify-content: space-between;
 }
@@ -55,4 +57,24 @@
 
 .Transaction-form * + * {
   margin-left: 10px;
+}
+
+.Category-card {
+  border-color: red;
+}
+
+.Category-card h2 span {
+  border-radius: 3px;
+  padding: 3px 5px;
+  border: 3px solid transparent;
+}
+
+.Category-card h2 span:hover {
+  border: 3px solid #CEE5FE;
+}
+
+.Category-card input {
+  font-size: 20px;
+  width: 150px;
+  margin: 0 10px;
 }
