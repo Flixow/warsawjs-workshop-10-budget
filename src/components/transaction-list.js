@@ -12,7 +12,13 @@ const TransactionList = ({
 
   return (
     <div>
-      <TransactionForm onSubmit={onAddTransaction} />
+      <TransactionForm
+        onSubmit={onAddTransaction}
+        categories={categories.map(item => ({
+          name: item.name,
+          id: item.id
+        }))}
+      />
       {currentCategory && (
         <CategoryCard readOnly item={currentCategory} />
       )}

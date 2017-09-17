@@ -6,4 +6,3 @@
 
 ## Kroki:
 - [ ] Dodać logikę znajdowania i usuwania kategorii w metodzie `handleRemoveTransaction`
-- [ ] 
